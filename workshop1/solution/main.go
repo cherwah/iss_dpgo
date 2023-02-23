@@ -28,10 +28,10 @@ func main() {
 	 * Play the guessing game.
 	 **************************************/
 	turn := 0
-	actual_val := 11
+	correct_val := 11
 	var curr guesser.IGuess
 
-	fmt.Println("Correct value: " + strconv.Itoa(actual_val))
+	fmt.Println("Correct value: " + strconv.Itoa(correct_val))
 
 	for {
 		if turn%2 == 0 {
@@ -43,7 +43,7 @@ func main() {
 		the_guess := curr.Guess()
 		fmt.Printf("%s guessed: %d\n", curr.Name(), the_guess)
 
-		if the_guess == actual_val {
+		if the_guess == correct_val {
 			fmt.Println(curr.Name() + " won!")
 			break
 		}
