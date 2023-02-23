@@ -11,8 +11,8 @@ func main() {
 	 * Set up boundaries and instances.
 	 **************************************/
 	bounds := guesser.Bounds{
-		Min: 0,
-		Max: 5,
+		Min: 4,
+		Max: 15,
 	}
 
 	g1 := &guesser.Next_guesser{
@@ -28,10 +28,10 @@ func main() {
 	 * Play the guessing game.
 	 **************************************/
 	turn := 0
-	actual_val := 4
+	actual_val := 11
 	var curr guesser.IGuess
 
-	fmt.Println("Actual value: " + strconv.Itoa(actual_val))
+	fmt.Println("Correct value: " + strconv.Itoa(actual_val))
 
 	for {
 		if turn%2 == 0 {
