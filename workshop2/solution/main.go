@@ -19,20 +19,28 @@ func main() {
 	for i := 0; i < 5; i++ {
 		human := asset.New_Human()
 
-		x := rand.Intn(length)
-		y := rand.Intn(width)
+		for {
+			x := rand.Intn(length)
+			y := rand.Intn(width)
 
-		board.Set_Cell(human, x, y)
+			if board.Set_Cell(human, x, y) {
+				break
+			}
+		}
 	}
 
 	// add 5 monsters to board
 	for i := 0; i < 5; i++ {
 		monster := asset.New_Monster()
 
-		x := rand.Intn(length)
-		y := rand.Intn(width)
+		for {
+			x := rand.Intn(length)
+			y := rand.Intn(width)
 
-		board.Set_Cell(monster, x, y)
+			if board.Set_Cell(monster, x, y) {
+				break
+			}
+		}
 	}
 
 	// show board with humans and monsters

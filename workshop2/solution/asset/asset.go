@@ -1,8 +1,6 @@
 package asset
 
 type Asset struct {
-	x      int
-	y      int
 	power  int
 	health int
 }
