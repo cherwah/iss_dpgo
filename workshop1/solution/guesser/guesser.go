@@ -23,7 +23,7 @@ type Rand_guesser struct {
 
 func (g *Next_guesser) Guess() int {
 	a_guess := g.Bounds.Min + g.N_tried
-	g.N_tried += 1
+	g.N_tried++
 
 	return a_guess
 }
