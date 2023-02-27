@@ -4,12 +4,15 @@ import (
 	"math/rand"
 	"solution/asset"
 	"solution/board"
+	"time"
 )
 
 func main() {
+	// seed random generator
+	rand.Seed(time.Now().UnixNano())
+
 	// create game board
 	board := board.New_Board(10, 10)
-
 	length, width := board.Dimension()
 
 	// add 5 humans to board
