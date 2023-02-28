@@ -8,7 +8,7 @@ import (
 type Board struct {
 	length int
 	width  int
-	cell   [][]*asset.IPlayable
+	cell   [][]asset.IPlayable
 }
 
 func New_Board(length int, width int) Board {
@@ -17,10 +17,10 @@ func New_Board(length int, width int) Board {
 		width:  width,
 	}
 
-	board.cell = make([][]*asset.IPlayable, length)
+	board.cell = make([][]asset.IPlayable, length)
 
 	for i := 0; i < length; i++ {
-		board.cell[i] = make([]*asset.IPlayable, width)
+		board.cell[i] = make([]asset.IPlayable, width)
 	}
 
 	return board
@@ -31,9 +31,8 @@ func (b *Board) Show() {
 		str := ""
 
 		for j := 0; j < b.width; j++ {
-			if b.cell[i][j] != nil {
-				var item asset.IPlayable = *b.cell[i][j]
-				str += item.Get_Type() + " "
+			if b.cell[i][j] != (asset.IPlayable)(nil) {
+				str += b.cell[i][j].Get_Type() + " "
 			} else {
 				str += ". "
 			}
@@ -48,8 +47,8 @@ func (b *Board) Dimension() (int, int) {
 }
 
 func (b *Board) Set_Cell(playable asset.IPlayable, x int, y int) bool {
-	if b.cell[x][y] == nil {
-		b.cell[x][y] = &playable
+	if b.cell[x][y] == (asset.IPlayable)(nil) {
+		b.cell[x][y] = playable
 		return true
 	}
 

@@ -23,7 +23,7 @@ func main() {
 			x := rand.Intn(length)
 			y := rand.Intn(width)
 
-			if board.Set_Cell(human, x, y) {
+			if board.Set_Cell(&human, x, y) {
 				break
 			}
 		}
@@ -37,7 +37,7 @@ func main() {
 			x := rand.Intn(length)
 			y := rand.Intn(width)
 
-			if board.Set_Cell(monster, x, y) {
+			if board.Set_Cell(&monster, x, y) {
 				break
 			}
 		}

@@ -30,12 +30,12 @@ type IPlayable interface {
 var human_img *Human_Image
 var monster_img *Monster_Image
 
-func New_Human() *Human {
+func New_Human() Human {
 	if human_img == nil {
 		human_img = &Human_Image{}
 	}
 
-	return &Human{
+	return Human{
 		Asset: Asset{
 			power:  10,
 			health: 100,
@@ -44,12 +44,12 @@ func New_Human() *Human {
 	}
 }
 
-func New_Monster() *Monster {
+func New_Monster() Monster {
 	if monster_img == nil {
 		monster_img = &Monster_Image{}
 	}
 
-	return &Monster{
+	return Monster{
 		Asset: Asset{
 			power:  50,
 			health: 100,
