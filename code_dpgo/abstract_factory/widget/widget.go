@@ -15,12 +15,3 @@ type Checkbox struct {
 	Button
 	Is_Tick bool
 }
-
-/*
-Interface.
-*/
-
-type Factory interface {
-	Make_Button() Button
-	Make_Checkbox() Checkbox
-}

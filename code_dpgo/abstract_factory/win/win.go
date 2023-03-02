@@ -9,7 +9,6 @@ import (
 Implementations for Windows.
 */
 type Win_Factory struct {
-	widget.Factory
 }
 
 func (w Win_Factory) Make_Button() widget.Button {
