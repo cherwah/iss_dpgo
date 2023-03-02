@@ -4,7 +4,7 @@ import "observer/notification"
 
 func main() {
 
-	arr := []int{1, 2, 3}
+	arr := []int{10, 9, 8}
 
 	observer := notification.Observer{}
 
