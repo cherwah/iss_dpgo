@@ -34,5 +34,4 @@ func main() {
 	stack.Pop()
 
 	observer.Unsubscribe(listener2)
-
 }

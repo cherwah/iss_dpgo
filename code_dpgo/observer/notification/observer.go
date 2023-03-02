@@ -15,7 +15,7 @@ type Observer struct {
 
 // able to Subscribe to be notified
 func (o *Observer) Subscribe(listener Listener) {
-	fmt.Print("Listener '", listener.Name, "' added.\n")
+	fmt.Print("Listener '", listener.Name, "' subscribed.\n")
 	o.listeners = append(o.listeners, listener)
 }
 
@@ -36,7 +36,7 @@ func (o *Observer) Unsubscribe(listener Listener) {
 					o.listeners[i+1:]...)
 			}
 
-			fmt.Print("Listener '", listener.Name, "' removed.\n")
+			fmt.Print("Listener '", listener.Name, "' unsubscribed.\n")
 			break
 		}
 	}
