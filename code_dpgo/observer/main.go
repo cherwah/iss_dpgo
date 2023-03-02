@@ -12,7 +12,6 @@ func main() {
 		Items:    arr,
 		Observer: &observer,
 	}
-	stack.Observer = &observer
 
 	// create listeners to receive events
 	listener1 := notification.Listener{
