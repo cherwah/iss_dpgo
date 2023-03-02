@@ -7,7 +7,7 @@ type Observable_Stack struct {
 }
 
 // the Stack has changed; let the Observer know
-func (stack Observable_Stack) Push(val int) {
+func (stack *Observable_Stack) Push(val int) {
 	stack.Items = append(stack.Items, val)
 
 	if stack.Observer != nil {
@@ -16,7 +16,7 @@ func (stack Observable_Stack) Push(val int) {
 }
 
 // the Stack has changed; let the Observer know
-func (stack Observable_Stack) Pop() {
+func (stack *Observable_Stack) Pop() {
 	len := len(stack.Items)
 
 	removed_item := stack.Items[len-1]
