@@ -1,30 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"strconv"
 	"visitor/tree"
+	"visitor/visitor"
 )
-
-type sum_visitor struct {
-	sum int
-}
-
-func (v *sum_visitor) Accept(node *tree.Node) {
-	v.sum += node.Key
-}
-
-func (v sum_visitor) print() {
-	fmt.Println("Sum is " + strconv.Itoa(v.sum))
-}
 
 func main() {
 	bt := create_tree()
 
-	visitor := sum_visitor{}
+	visitor := visitor.Sum_visitor{}
 	bt.Traverse(&visitor)
 
-	visitor.print()
+	visitor.Print()
 }
 
 // create a binary-search tree in the memory
