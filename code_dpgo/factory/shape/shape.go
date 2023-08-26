@@ -73,7 +73,7 @@ func (r rectangle) Area() float64 {
 }
 
 func (r rectangle) Perimeter() float64 {
-	return 2 * r.width * r.height
+	return 2 * (r.width + r.height)
 }
 
 /*
