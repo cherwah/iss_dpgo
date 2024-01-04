@@ -1,23 +1,24 @@
 /*
   Author: Tan Cher Wah
 
-  Go code to reverse a string.
+  Go code to find the length of a string recursively.
 */
 
-package main 
+package main
 
 import (
-  "bufio"
   "fmt"
+  "bufio"
   "os"
   "strings"
 )
 
+/*
+  Entry point.
+*/
 func main() {
-
-  fmt.Printf("Enter string to reverse: ")
-
-
+  fmt.Printf("Enter string: ")
+  
   // create a reader that reads from standard input
   // (that is, from the command line)
   reader := bufio.NewReader(os.Stdin)
@@ -34,24 +35,20 @@ func main() {
   // didn't filter the delimiter away
   str = strings.TrimRight(str, "\n")
 
-  fmt.Printf("You entered '%s'.\n", str)
-  fmt.Printf("The reverse is '%s'.\n", reverse_str(str))
+  fmt.Printf("Your string '%s' has %d characters.\n", 
+    str, recursive_strlen(str))
 }
+
 
 /*
- * Returns a string that has been reversed.
+ * Computes the length of a string using a recursive approach.
+ *
+ * Returns the length of the string.
  */
-func reverse_str(str string) string {
-	var rstr = ""
-
-  // reconstruct the string by reading it back
-  // in reverse (start from the end)
-	for i := len(str) - 1; i >= 0; i-- {
-		// need to cast from a rune to a string
-		rstr += string(str[i])
+func recursive_strlen(str string) int {
+	if len(str) == 0 {
+		return 0
 	}
 
-	return rstr
+	return 1 + recursive_strlen(str[1:])
 }
-
-

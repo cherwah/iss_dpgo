@@ -32,7 +32,7 @@ func main() {
 
   // only accepts a single character as input
   for ; ; {
-    fmt.Printf("Enter a character to count its occurences: ")
+    fmt.Printf("Enter character to count: ")
     fmt.Scanln(&ch)
 
     if len(ch) == 1 {
@@ -45,7 +45,7 @@ func main() {
     fmt.Printf("Please only enter a single character...\n")
   }
 
-  fmt.Printf("'%s' appears %d times in your string\n",
+  fmt.Printf("'%s' appears %d times in your string.\n",
     ch, count_occurences(str, ch)) 
 }
 
