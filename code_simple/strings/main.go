@@ -1,16 +1,25 @@
+/*
+  Author: Tan Cher Wah
+  
+  Simple operations involving strings in Go.
+*/
+
 package main
 
 import (
 	"fmt"
 )
 
+/*
+  Entry point.
+*/
 func main() {
 	str := "hello golang!"
-	fmt.Println(str, "reversed is", reverse_string(str))
+	fmt.Printf("'%s' reversed is '%s'\n", str, reverse_string(str))
 
 	target := "g"
-	fmt.Println("There are", count_occurences(str, target),
-		"occurrences of", target, "in", str)
+	fmt.Printf("There are %d occurrences of character '%s' in '%s'\n", 
+    count_occurences(str, target), target, str)
 
 	fmt.Println("There are", recursive_strlen(str),
 		"characters in", str)
