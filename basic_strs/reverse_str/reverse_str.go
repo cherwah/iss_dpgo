@@ -17,7 +17,6 @@ func main() {
 
   fmt.Printf("Enter string to reverse: ")
 
-
   // create a reader that reads from standard input
   // (that is, from the command line)
   reader := bufio.NewReader(os.Stdin)
