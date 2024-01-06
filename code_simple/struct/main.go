@@ -1,6 +1,6 @@
 package main
 
-import "structures/robot"
+import "struct/robot"
 
 func main() {
 	robot := robot.Robot{
