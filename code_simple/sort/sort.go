@@ -26,9 +26,7 @@ func main() {
   reader := bufio.NewReader(os.Stdin)
 
   // prompt user 
-  fmt.Println("To randomly generate a list of values, " +
-    "enter positive integers for NUM, LOW and HIGH " +
-    " like so - 10 1 50")
+  fmt.Println("To generate a list of N random integers between Low and High, use format: N Low High (e.g. 10 1 50)");
 
   // read until a newline character is found
   str, err := reader.ReadString('\n') 
