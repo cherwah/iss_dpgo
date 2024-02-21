@@ -1,7 +1,7 @@
 package main
 
 import (
-	"decorator/decorator"
+	"decorator/time_deco"
 	"fmt"
 	"strconv"
 )
@@ -29,5 +29,5 @@ func main() {
 	fmt.Println("----------------------")
 
 	fmt.Println("With Decoration")
-	decorator.Time_it(sum_it, arr)
+	time_deco.Time_it(sum_it, arr)
 }

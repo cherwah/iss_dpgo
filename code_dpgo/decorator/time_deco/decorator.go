@@ -1,4 +1,4 @@
-package decorator
+package time_deco
 
 import (
 	"fmt"
