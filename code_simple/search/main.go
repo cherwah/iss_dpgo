@@ -16,10 +16,12 @@ func main() {
 	rand_arr := array_random_int(10, 1, 50)
 	fmt.Println("rand_arr =", rand_arr)
 
+  target := rand_arr[5]
 	// using Go's built-in sort()
 	sort.Ints(rand_arr)
 
-  target := rand_arr[5]
+	fmt.Println("sorted rand_arr =", rand_arr)
+
 
 	// performs binary search
   found := binary_search(rand_arr, target)
@@ -56,10 +58,12 @@ func binary_search(arr []int, target int) bool {
 	end_pt := len(arr) - 1
 	mid_pt := (start_pt + end_pt) / 2
 
+  found := false
+
 	for { // while true
 		if arr[mid_pt] == target {
-			// found
-			return true 
+      found = true
+      break
 		}
 
 		if arr[mid_pt] > target {
@@ -73,9 +77,10 @@ func binary_search(arr []int, target int) bool {
 		if start_pt < end_pt {
 		  // re-position our mid-point
 		  mid_pt = (start_pt + end_pt) / 2
+    } else {
+      break
     }
 	}
 
-	// not found
-	return false
+  return found
 }
