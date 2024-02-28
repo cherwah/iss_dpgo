@@ -31,7 +31,7 @@ func main() {
 
   // trim the newline character as the reader
   // didn't filter the delimiter away
-  str = strings.TrimRight(str, "\n")
+  str = strings.TrimRight(str, "\r\n")
 
   fmt.Printf("You entered '%s'.\n", str)
   fmt.Printf("The reverse is '%s'.\n", reverse_str(str))

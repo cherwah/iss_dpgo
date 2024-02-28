@@ -28,7 +28,7 @@ func main() {
 
   // trim the newline character as the reader
   // didn't filter the delimiter away
-  str = strings.TrimRight(str, "\n")
+  str = strings.TrimRight(str, "\r\n")
 
   // only accepts a single character as input
   for ; ; {

@@ -38,7 +38,7 @@ func main() {
 
   // trim the newline character as the reader
   // didn't filter the delimiter away
-  str = strings.TrimRight(str, "\n")
+  str = strings.TrimRight(str, "\r\n")
 
   vec := []int{0, 0, 0}
 

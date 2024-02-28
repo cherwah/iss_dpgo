@@ -24,7 +24,7 @@ func main() {
   reader := bufio.NewReader(os.Stdin)
 
   // read until a newline character is found
-  str, err := reader.ReadString('\n') 
+  str, err := reader.ReadString('\n')
 
   if err != nil {
     fmt.Println("Error reading input: ", err)
@@ -33,7 +33,8 @@ func main() {
 
   // trim the newline character as the reader
   // didn't filter the delimiter away
-  str = strings.TrimRight(str, "\n")
+  // "\r" to handle Windows newline character
+  str = strings.TrimRight(str, "\r\n")
 
   fmt.Printf("Your string '%s' has %d characters.\n", 
     str, recursive_strlen(str))

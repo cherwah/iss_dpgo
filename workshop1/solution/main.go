@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"solution/guesser"
-	"strconv"
 )
 
 func main() {
@@ -31,7 +30,7 @@ func main() {
 	correct_val := 11
 	var curr guesser.IGuess
 
-	fmt.Println("Correct value: " + strconv.Itoa(correct_val))
+	fmt.Printf("Correct value: %d\n", correct_val)
 
 	for {
 		if turn%2 == 0 {
