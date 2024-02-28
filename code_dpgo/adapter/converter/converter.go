@@ -34,6 +34,8 @@ func (j *Json) Convert(json_str string) map[string]string {
 	// create an empty dictionary
 	dict := map[string]string{}
 
+  // parse the json string and key/value pairs and
+  // add them into our dictionary 
 	json.Unmarshal([]byte(json_str), &dict)
 
 	return dict
