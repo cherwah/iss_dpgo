@@ -33,7 +33,7 @@ func (g *Next_guesser) Name() string {
 }
 
 func (g *Rand_guesser) Guess() int {
-	return rand.Intn(g.Bounds.Max-g.Bounds.Min) + g.Bounds.Min
+	return rand.Intn(g.Bounds.Max-g.Bounds.Min+1) + g.Bounds.Min
 }
 
 func (g *Rand_guesser) Name() string {
