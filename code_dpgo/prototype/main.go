@@ -17,4 +17,7 @@ func main() {
 
 	fmt.Println("circle1==circle2? =>",
 		circle1 == circle2)
+
+  fmt.Printf("circle1 pointing to %p\n", &circle1)
+  fmt.Printf("circle2 pointing to %p\n", &circle2)
 }

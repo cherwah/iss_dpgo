@@ -18,8 +18,8 @@ func (v *Find_visitor) Accept(node *tree.Node) {
 
 func (v *Find_visitor) Print() {
 	if v.Found {
-		fmt.Printf("The value %d is found.", v.Key)
+		fmt.Printf("The value %d is found.\n", v.Key)
 	} else {
-		fmt.Printf("The value %d is not found.", v.Key)
+		fmt.Printf("The value %d is not found.\n", v.Key)
 	}
 }

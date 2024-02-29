@@ -20,7 +20,7 @@ func main() {
 	// starting thread to simulate error log
 	go err_log()
 
-	time.Sleep(10 * time.Second)
+	time.Sleep(5 * time.Second)
 }
 
 // database log

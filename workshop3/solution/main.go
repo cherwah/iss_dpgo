@@ -8,7 +8,10 @@ import (
 func main() {
 	bt := create_tree()
 
-	visitor := visitor.Find_visitor{Key: 3}
+  visitor := visitor.Find_visitor{
+    Found: false,
+    Key: 3,
+  }
 
 	bt.Traverse(&visitor)
 

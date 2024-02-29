@@ -22,7 +22,7 @@ func main() {
 	json := `{"name":"john","age":"23","gender":"m"}`
 
 	json_adapter := converter.Json{}
-	dict2 := json_adapter.Convert(json)a
+	dict2 := json_adapter.Convert(json)
   // adapted our data to work with existing interface
 	log(dict2)
 }
